@@ -1,5 +1,5 @@
 def selectStage = ['Add developer']
-def orgList = ['APIGEE_ORGANISATION_NAME']
+def orgList = ['iconic-lane-387808']
 
 // Parameters Separated with Separator
 properties([
@@ -123,7 +123,7 @@ pipeline {
           steps {
             script {
           // Clone the repository
-          checkout([$class: 'GitSCM', branches: [[name: "*/master"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'gi-apigee-data']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/knoldus/Automation-to-create-proxies-in-Apigee.git']]])
+          checkout([$class: 'GitSCM', branches: [[name: "*/main"]], doGenerateSubmoduleConfigurations: false, extensions: [[$class: 'RelativeTargetDirectory', relativeTargetDir: 'Automation-to-create-proxies-in-Apigee/proxies']], submoduleCfg: [], userRemoteConfigs: [[credentialsId: 'github', url: 'https://github.com/knoldus/Automation-to-create-proxies-in-Apigee.git']]])
 
               for (proxy in selectedProxies) {
                 sh "$APIGEE_CLI_DIR/apigeecli apis create bundle -n ${proxy} -f ${WORKSPACE}/Automation-to-create-proxies-in-Apigee/proxies/${proxy}/apiproxy -o ${params.ORGANISATION} -t ${env.TOKEN}"
