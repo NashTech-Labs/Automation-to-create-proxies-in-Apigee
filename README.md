@@ -10,7 +10,7 @@ For using this template we have to update our Apigee organisation name in jenkin
 
 `def orgList = ['APIGEE_ORGANISATION_NAME']`
 
-Mention the PROXY_BUNDLE_NAME folder name containing proxy bundle name inside proxies folder.
+Mention the PROXY_BUNDLE_NAME folder name (e.g test_proxy) containing proxy inside `proxies` folder.
 
 Create a Jenkins pipeline using this repository and build that pipeline by passing parameters to it.
 

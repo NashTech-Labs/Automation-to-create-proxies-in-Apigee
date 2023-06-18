@@ -1,4 +1,4 @@
-def orgList = ['iconic-lane-387808']
+def orgList = ['APIGEE_ORGANISATION_NAME']
 
 // Parameters Separated with Separator
 properties([
