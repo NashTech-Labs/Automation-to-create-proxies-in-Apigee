@@ -1,4 +1,3 @@
-def selectStage = ['Add developer']
 def orgList = ['iconic-lane-387808']
 
 // Parameters Separated with Separator
